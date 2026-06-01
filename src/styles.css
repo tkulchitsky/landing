@@ -51,6 +51,7 @@ footer {
   margin: 0 auto;
 }
 
+/* Idea: test this CSS line-by-line in a new project */
 header {
   display: flex;
   align-items: center;
