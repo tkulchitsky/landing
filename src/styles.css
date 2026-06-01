@@ -21,6 +21,7 @@ body {
   background: #101820;
 }
 
+/* TODO: Make background apply to hero section only */
 body::before {
   position: fixed;
   inset: 0 0 0 42%;  /* How far to the right the photo *starts* */
@@ -109,6 +110,13 @@ a:hover {
 .button:hover {
   text-decoration: none;
   background: #115e59;
+}
+
+.subtle-link {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-decoration-color: rgba(255, 255, 255, 0.35);
+  text-underline-offset: 4px;
 }
 
 footer {
