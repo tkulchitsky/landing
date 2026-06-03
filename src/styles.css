@@ -121,6 +121,10 @@ header a[aria-current="page"] {
   content: none;
 }
 
+.about-hero::before {
+  background: url("../images/about.jpg") 33% center / cover no-repeat;
+}
+
 .hero-text {
   display: grid;
   gap: 10px;
