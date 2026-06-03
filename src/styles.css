@@ -18,6 +18,17 @@ body {
   line-height: 1.5;
   overflow-x: hidden;
   background: #101820;
+  --home-transition: 0;
+  --home-photo-scale: 1;
+  --home-photo-shift: 0px;
+  --home-photo-saturate: 1;
+  --home-overlay-opacity: 1;
+  --home-hero-lift: 0px;
+  --home-hero-opacity: 1;
+  --home-showoff-rise: 52px;
+  --home-showoff-opacity: 0.76;
+  --home-content-rise: 34px;
+  --home-content-opacity: 0.55;
 }
 
 header,
@@ -77,6 +88,10 @@ header a[aria-current="page"] {
   padding-bottom: max(80px, 35dvh);  /* Could clamp instead, need variable for hero contents height */
 }
 
+.home-transition-active .hero {
+  overflow: hidden;
+}
+
 .hero {
     /* min-height: clamp(200px, 41vw, 760px);  If want to fit uncropped version of cover.jpg */
     min-height: calc(100dvh - var(--header-height));
@@ -96,6 +111,12 @@ header a[aria-current="page"] {
   content: "";
 }
 
+.home-transition-active .hero::before {
+  transform: scale(var(--home-photo-scale)) translateX(var(--home-photo-shift));
+  transform-origin: center;
+  filter: saturate(var(--home-photo-saturate));
+}
+
 .hero::after,
 .hero-short::after {
   position: absolute;
@@ -111,9 +132,20 @@ header a[aria-current="page"] {
   content: "";
 }
 
+.home-transition-active .hero::after {
+  opacity: var(--home-overlay-opacity);
+}
+
 .hero-text {
   display: grid;
   gap: 10px;
+}
+
+.home-transition-active .hero h1,
+.home-transition-active .hero .hero-text,
+.home-transition-active .hero .button {
+  transform: translateY(var(--home-hero-lift));
+  opacity: var(--home-hero-opacity);
 }
 
 .hero h1,
@@ -154,6 +186,34 @@ header a[aria-current="page"] {
   padding: 80px max(20px, calc((100vw - 1120px) / 2));
   color: #2f241c;
   background: #fff7ed;
+}
+
+.home-transition-active .show-off {
+  position: relative;
+  z-index: 1;
+  transform: translateY(var(--home-showoff-rise));
+  opacity: var(--home-showoff-opacity);
+}
+
+.home-transition-active .show-off h2,
+.home-transition-active .featured-project {
+  transform: translateY(var(--home-content-rise));
+  opacity: var(--home-content-opacity);
+}
+
+.home-transition-active .hero,
+.home-transition-active .hero::before,
+.home-transition-active .hero::after,
+.home-transition-active .hero h1,
+.home-transition-active .hero .hero-text,
+.home-transition-active .hero .button,
+.home-transition-active .show-off,
+.home-transition-active .show-off h2,
+.home-transition-active .featured-project {
+  transition:
+    opacity 120ms linear,
+    filter 120ms linear,
+    transform 120ms linear;
 }
 
 .show-off h2 {
