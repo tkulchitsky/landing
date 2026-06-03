@@ -60,7 +60,8 @@ header a[aria-current="page"] {
 .hero .subtle-link:hover,
 .hero-short .subtle-link:hover,
 .featured-project .subtle-link:hover,
-.project-card .subtle-link:hover {
+.project-card .subtle-link:hover,
+.resume-slide .subtle-link:hover {
   text-decoration-color: currentColor;
 }
 
@@ -139,7 +140,8 @@ header a[aria-current="page"] {
   text-underline-offset: 4px;
 }
 
-.hero .button {
+.hero .button,
+.hero-short .button {
   margin-top: 40px;
   align-self: start;
 }
@@ -199,7 +201,8 @@ header a[aria-current="page"] {
 }
 
 .featured-project .subtle-link,
-.project-card .subtle-link {
+.project-card .subtle-link,
+.resume-slide .subtle-link {
   color: #7c2d12;
   text-decoration: underline;
   text-decoration-thickness: 1px;
@@ -244,6 +247,213 @@ header a[aria-current="page"] {
   color: #6b4f3f;
 }
 
+.resume-page {
+  scroll-behavior: smooth;
+  scroll-snap-type: y proximity;
+}
+
+.resume-page main {
+  width: 100%;
+}
+
+.resume-slide {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(280px, 0.85fr);
+  align-items: center;
+  gap: clamp(28px, 6vw, 72px);
+  min-height: calc(100dvh - var(--header-height));
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  padding: clamp(48px, 8vw, 88px) max(20px, calc((100vw - 1120px) / 2));
+  color: #2f241c;
+  background: #fff7ed;
+  scroll-snap-align: start;
+}
+
+.resume-slide:nth-of-type(odd) {
+  background: #f5fbf8;
+}
+
+.resume-slide.resume-intro {
+  color: #ffffff;
+  background: #101820;
+}
+
+.resume-slide-copy {
+  display: grid;
+  gap: 18px;
+  max-width: 640px;
+}
+
+.resume-kicker {
+  margin: 0;
+  color: #0f766e;
+  font-weight: 800;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.resume-intro .resume-kicker {
+  color: #5eead4;
+}
+
+.resume-slide h1,
+.resume-slide h2 {
+  margin: 0;
+  color: #3b2a1f;
+  font-size: clamp(2.4rem, 6vw, 5rem);
+  line-height: 0.98;
+}
+
+.resume-intro h1 {
+  color: #ffffff;
+}
+
+.resume-slide-copy > p:not(.resume-kicker) {
+  margin: 0;
+  color: #6b4f3f;
+  font-size: clamp(1.05rem, 2vw, 1.35rem);
+}
+
+.resume-intro .resume-slide-copy > p:not(.resume-kicker) {
+  color: #d9e2ec;
+}
+
+.resume-points {
+  display: grid;
+  gap: 10px;
+  margin: 6px 0 0;
+  padding-left: 22px;
+  color: #6b4f3f;
+  font-size: 1.05rem;
+}
+
+.resume-photo,
+.resume-visual,
+.resume-skill-board {
+  margin: 0;
+  min-height: clamp(320px, 52dvh, 560px);
+  border: 1px solid rgba(124, 45, 18, 0.2);
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fffbf5;
+  box-shadow: 0 24px 60px rgba(16, 24, 32, 0.14);
+}
+
+.resume-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: inherit;
+  object-fit: cover;
+}
+
+.resume-visual {
+  display: grid;
+  align-content: center;
+  gap: 22px;
+  padding: clamp(24px, 4vw, 42px);
+}
+
+.resume-visual span {
+  color: #7c2d12;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.resume-visual-code {
+  color: #d9e2ec;
+  background: #101820;
+  border-color: rgba(94, 234, 212, 0.3);
+}
+
+.resume-visual-code span {
+  color: #5eead4;
+}
+
+.resume-visual-code pre {
+  margin: 0;
+  white-space: pre-wrap;
+  font: 700 clamp(1rem, 2vw, 1.35rem) / 1.6 ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+.resume-visual-notes {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-content: center;
+  background: #fffbf5;
+}
+
+.resume-visual-notes span {
+  grid-column: 1 / -1;
+}
+
+.resume-visual-notes p {
+  display: grid;
+  place-items: center;
+  min-height: 112px;
+  margin: 0;
+  border: 1px solid #fed7aa;
+  border-radius: 8px;
+  color: #3b2a1f;
+  font-weight: 800;
+}
+
+.resume-skill-board {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  min-height: clamp(360px, 56dvh, 600px);
+}
+
+.resume-skill-board div {
+  display: grid;
+  align-content: center;
+  gap: 8px;
+  padding: clamp(22px, 4vw, 36px);
+  border-top: 1px solid #fed7aa;
+}
+
+.resume-skill-board div:first-child {
+  border-top: 0;
+}
+
+.resume-skill-board h3 {
+  margin: 0;
+  color: #7c2d12;
+  font-size: 1.25rem;
+}
+
+.resume-skill-board p {
+  margin: 0;
+  color: #3b2a1f;
+  font-size: 1.1rem;
+}
+
+.resume-nav {
+  position: fixed;
+  top: 50%;
+  right: max(14px, calc((100vw - 1180px) / 2));
+  z-index: 5;
+  display: grid;
+  gap: 12px;
+  transform: translateY(-50%);
+}
+
+.resume-nav a {
+  width: 11px;
+  height: 11px;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  color: rgba(16, 24, 32, 0.45);
+  background: transparent;
+}
+
+.resume-nav a:hover,
+.resume-nav a[aria-current="true"] {
+  color: #0f766e;
+  background: currentColor;
+  text-decoration: none;
+}
+
 .button {
   display: inline-flex;
   width: fit-content;
@@ -283,5 +493,26 @@ footer {
 
   .featured-project {
     grid-template-columns: 1fr;
+  }
+
+  .resume-slide {
+    grid-template-columns: 1fr;
+    min-height: calc(100dvh - var(--header-height));
+    padding-top: 56px;
+    padding-bottom: 56px;
+  }
+
+  .resume-photo,
+  .resume-visual,
+  .resume-skill-board {
+    min-height: 280px;
+  }
+
+  .resume-nav {
+    top: auto;
+    right: 20px;
+    bottom: 20px;
+    grid-auto-flow: column;
+    transform: none;
   }
 }

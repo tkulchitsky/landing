@@ -7,11 +7,11 @@
     <link rel="stylesheet" href="styles.css" />
     <script src="script.js" defer></script>
   </head>
-  <body>
+  <body class="resume-page">
     <header>
       <a href="index.html" aria-label="Home">Tim Kulchitsky</a>
       <nav aria-label="Main navigation">
-        <a href="resume.html">Résumé</a>
+        <a href="resume.html" aria-current="page">Résumé</a>
         <a href="projects.html">Projects</a>
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
@@ -19,9 +19,123 @@
     </header>
 
     <main>
-      <section class="hero-short" aria-labelledby="page-title">
-        <h1 id="page-title">Résumé</h1>
-        <p>Add your experience, education, skills, and downloadable résumé here.</p>
+      <nav class="resume-nav" aria-label="Resume sections">
+        <a href="#resume-intro" aria-label="Intro"></a>
+        <a href="#resume-experience" aria-label="Experience"></a>
+        <a href="#resume-projects" aria-label="Projects"></a>
+        <a href="#resume-education" aria-label="Education"></a>
+        <a href="#resume-skills" aria-label="Skills"></a>
+      </nav>
+
+      <section class="resume-slide resume-intro" id="resume-intro" aria-labelledby="page-title">
+        <div class="resume-slide-copy">
+          <p class="resume-kicker">Résumé</p>
+          <h1 id="page-title">Tim Kulchitsky</h1>
+          <p>
+            Programmer, musician, speedcuber, and amateur philosopher. Scroll through the sections for a
+            more visual pass through my experience, projects, education, and skills.
+          </p>
+          <a class="button" href="#resume-experience">Start Scrolling</a>
+        </div>
+
+        <figure class="resume-photo">
+          <img src="../images/cover_cropped2.jpg" alt="Tim Kulchitsky outdoors" />
+        </figure>
+      </section>
+
+      <section class="resume-slide" id="resume-experience" aria-labelledby="experience-title">
+        <div class="resume-slide-copy">
+          <p class="resume-kicker">01 / Experience</p>
+          <h2 id="experience-title">Independent Software Projects</h2>
+          <p>
+            I build small, focused software projects to practice turning ideas into useful tools. My work
+            so far has centered on speedcubing, command-line workflows, and personal web design.
+          </p>
+          <ul class="resume-points">
+            <li>Built command-line tools and web pages focused on speedcubing practice.</li>
+            <li>Designed responsive pages and reusable CSS for a personal portfolio site.</li>
+            <li>Explored C, HTML, CSS, JavaScript, and graphics-oriented interface ideas.</li>
+          </ul>
+        </div>
+
+        <div class="resume-visual resume-visual-code" aria-hidden="true">
+          <span>terminal</span>
+          <pre>gcc cfop-puzzles.c
+./cfop-puzzles --case f2l
+case generated
+solve, inspect, repeat</pre>
+        </div>
+      </section>
+
+      <section class="resume-slide" id="resume-projects" aria-labelledby="projects-title">
+        <div class="resume-slide-copy">
+          <p class="resume-kicker">02 / Projects</p>
+          <h2 id="projects-title">CFOP Puzzles</h2>
+          <p>
+            CFOP Puzzles is a Rubik's Cube puzzle generation and solving tool. I started it because I
+            wanted a better way to drill complex F2L cases than writing solutions by hand.
+          </p>
+          <ul class="resume-points">
+            <li>Created the base command-line version in C.</li>
+            <li>Focused the workflow on repeatable puzzle generation and solving practice.</li>
+            <li>Planned a 3D cube visualization layer with GTK.</li>
+          </ul>
+          <a class="subtle-link" href="projects.html">See the projects page</a>
+        </div>
+
+        <figure class="resume-photo">
+          <img src="../images/cfop_puzzles_screenshot.png" alt="CFOP Puzzles screenshot" />
+        </figure>
+      </section>
+
+      <section class="resume-slide" id="resume-education" aria-labelledby="education-title">
+        <div class="resume-slide-copy">
+          <p class="resume-kicker">03 / Education</p>
+          <h2 id="education-title">Computer Science Study</h2>
+          <p>
+            My learning combines coursework, self-study, and project-based practice. I am especially
+            interested in systems concepts, algorithms, web development, and interactive graphics.
+          </p>
+          <ul class="resume-points">
+            <li>Studying programming fundamentals, algorithms, and systems concepts.</li>
+            <li>Practicing web development through a hand-built personal site.</li>
+            <li>Using portfolio projects to connect theory with working software.</li>
+          </ul>
+        </div>
+
+        <div class="resume-visual resume-visual-notes" aria-hidden="true">
+          <span>study map</span>
+          <p>C</p>
+          <p>Algorithms</p>
+          <p>Web UI</p>
+          <p>Graphics</p>
+        </div>
+      </section>
+
+      <section class="resume-slide" id="resume-skills" aria-labelledby="skills-title">
+        <div class="resume-slide-copy">
+          <p class="resume-kicker">04 / Skills</p>
+          <h2 id="skills-title">Tools I Like Working With</h2>
+          <p>
+            I like the space where careful logic meets a human-facing interface: systems thinking,
+            polished layouts, and tools that make practice feel sharper.
+          </p>
+        </div>
+
+        <div class="resume-skill-board" aria-label="Skills">
+          <div>
+            <h3>Languages</h3>
+            <p>C, HTML, CSS, JavaScript</p>
+          </div>
+          <div>
+            <h3>Tools</h3>
+            <p>Git, command-line workflows, browser developer tools</p>
+          </div>
+          <div>
+            <h3>Interests</h3>
+            <p>Systems programming, interactive graphics, puzzle software, UI design</p>
+          </div>
+        </div>
       </section>
     </main>
 
