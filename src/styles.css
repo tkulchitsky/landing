@@ -171,7 +171,8 @@ header a[aria-current="page"] {
   text-underline-offset: 4px;
 }
 
-.hero .button {
+.hero .button,
+.hero-short .button {
   margin-top: 40px;
   align-self: start;
 }
