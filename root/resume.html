@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Résumé | Tim Kulchitsky</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <a href="index.html" aria-label="Home">Tim Kulchitsky</a>
+      <nav aria-label="Main navigation">
+        <a href="resume.html">Résumé</a>
+        <a href="projects.html">Projects</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero-short" aria-labelledby="page-title">
+        <h1 id="page-title">Résumé</h1>
+        <p>Scroll down to see a dynamic version of my résumé or download the PDF below.</p>
+        <a class="button" href="resume.html" download>
+          <svg
+            aria-hidden="true"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.4"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M12 3v12" />
+            <path d="m7 10 5 5 5-5" />
+            <path d="M5 21h14" />
+          </svg>
+          Download
+        </a>
+      </section>
+
+      <section class="resume-document-wrap" aria-label="Resume overview">
+        <div class="resume-profile">
+          <div class="resume-profile-copy">
+            <h2>Tim Kulchitsky</h2>
+            <p>Programmer, musician, speedcuber, and amateur philosopher.</p>
+          </div>
+
+          <div class="resume-document-links" aria-label="Resume links">
+            <a class="subtle-link" href="contact.html">Contact</a>
+            <a class="subtle-link" href="projects.html">Projects</a>
+            <a class="subtle-link" href="https://github.com/tkulchitsky">GitHub</a>
+            <a class="subtle-link" href="https://www.linkedin.com/in/tim-kulchitsky-30aa33186/">LinkedIn</a>
+          </div>
+
+          <nav class="resume-section-nav" aria-label="Resume sections">
+            <a href="#experience-title">Experience</a>
+            <a href="#projects-title">Projects</a>
+            <a href="#education-title">Education</a>
+            <a href="#skills-title">Skills</a>
+          </nav>
+        </div>
+
+        <article class="resume-document">
+          <div class="resume-document-header">
+            <div>
+              <h2>Technical Experience</h2>
+              <p>A concise overview of my programming experience, education, projects, and technical skills.</p>
+            </div>
+          </div>
+
+          <section class="resume-document-section" aria-labelledby="experience-title">
+            <h2 id="experience-title">Experience</h2>
+
+            <div class="resume-entry">
+              <div class="resume-entry-header">
+                <div>
+                  <h3>Independent Software Projects</h3>
+                  <p>Personal development work</p>
+                </div>
+                <span>2025-Present</span>
+              </div>
+              <ul>
+                <li>Built command-line tools and web pages focused on speedcubing practice and puzzle workflows.</li>
+                <li>Designed responsive layouts and reusable styles for a personal portfolio site.</li>
+                <li>Explored C, HTML, CSS, JavaScript, and graphics-oriented ideas for future cube visualizations.</li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="resume-document-section" aria-labelledby="projects-title">
+            <h2 id="projects-title">Projects</h2>
+
+            <div class="resume-entry">
+              <div class="resume-entry-header">
+                <div>
+                  <h3>CFOP Puzzles</h3>
+                  <p>Rubik's Cube puzzle generation and solving tool</p>
+                </div>
+                <span>C</span>
+              </div>
+              <ul>
+                <li>Created a command-line program for generating and solving CFOP-style Rubik's Cube puzzles.</li>
+                <li>Focused the workflow on drilling complex F2L cases more efficiently than handwritten notes.</li>
+                <li>Planned a 3D cube visualization layer using GTK.</li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="resume-document-section" aria-labelledby="education-title">
+            <h2 id="education-title">Education</h2>
+
+            <div class="resume-entry">
+              <div class="resume-entry-header">
+                <div>
+                  <h3>Computer Science Study</h3>
+                  <p>Coursework, self-study, and project-based learning</p>
+                </div>
+                <span>Ongoing</span>
+              </div>
+              <ul>
+                <li>Studying programming fundamentals, algorithms, systems concepts, and web development.</li>
+                <li>Building portfolio projects to practice turning ideas into usable software.</li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="resume-document-section" aria-labelledby="skills-title">
+            <h2 id="skills-title">Skills</h2>
+
+            <div class="resume-skills">
+              <div>
+                <h3>Languages</h3>
+                <p>C, HTML, CSS, JavaScript</p>
+              </div>
+              <div>
+                <h3>Tools</h3>
+                <p>Git, command-line workflows, browser developer tools</p>
+              </div>
+              <div>
+                <h3>Interests</h3>
+                <p>Systems programming, interactive graphics, puzzle software, UI design</p>
+              </div>
+            </div>
+          </section>
+        </article>
+      </section>
+    </main>
+
+    <footer>
+      <small>&copy; 2026 Timothy Kulchitsky.</small>
+    </footer>
+  </body>
+</html>
