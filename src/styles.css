@@ -102,6 +102,10 @@ header a[aria-current="page"] {
   max-height: calc(100dvh - 2.5 * var(--header-height));
 }
 
+.projects-hero {
+  background: #101820;
+}
+
 .hero::before,
 .hero-short::before {
   position: absolute;
@@ -130,6 +134,11 @@ header a[aria-current="page"] {
     rgba(16, 24, 32, 0.04) 100%
   );
   content: "";
+}
+
+.projects-hero::before,
+.projects-hero::after {
+  content: none;
 }
 
 .home-transition-active .hero::after {
