@@ -65,6 +65,8 @@ header a[aria-current="page"] {
   text-decoration-color: currentColor;
 }
 
+/* Hero sections */
+
 .hero,
 .hero-short {
   position: relative;
@@ -155,6 +157,8 @@ header a[aria-current="page"] {
   align-self: start;
 }
 
+/* Show off section (.show-off in home page and Projects) */
+
 .show-off {
   display: grid;
   gap: 32px;
@@ -163,6 +167,19 @@ header a[aria-current="page"] {
   padding: 80px max(20px, calc((100vw - 1120px) / 2));
   color: #2f241c;
   background: #fff7ed;
+}
+
+.show-off-reveal-ready .show-off {
+  opacity: 0;
+  transform: translateY(32px);
+  transition:
+    opacity 500ms ease,
+    transform 500ms ease;
+}
+
+.show-off-reveal-ready .show-off.is-visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .show-off h2 {
@@ -223,6 +240,8 @@ header a[aria-current="page"] {
   align-self: start;
 }
 
+/* Projects */
+
 .project-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -255,6 +274,8 @@ header a[aria-current="page"] {
   margin: 0;
   color: #6b4f3f;
 }
+
+/* Resume */
 
 .resume-document-wrap {
   display: grid;
@@ -438,6 +459,8 @@ header a[aria-current="page"] {
   background: #fffbf5;
   box-shadow: 0 14px 34px rgba(16, 24, 32, 0.08);
 }
+
+/* Other */
 
 .button {
   display: inline-flex;
