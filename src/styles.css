@@ -56,6 +56,14 @@ header a[aria-current="page"] {
   text-underline-offset: 4px;
 }
 
+/* Subtle links */
+.hero .subtle-link:hover,
+.hero-short .subtle-link:hover,
+.featured-project .subtle-link:hover,
+.project-card .subtle-link:hover {
+  text-decoration-color: currentColor;
+}
+
 .hero,
 .hero-short {
   position: relative;
@@ -123,6 +131,14 @@ header a[aria-current="page"] {
   font-size: 1.125rem;
 }
 
+.hero .subtle-link,
+.hero-short .subtle-link {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-decoration-color: rgba(255, 255, 255, 0.35);
+  text-underline-offset: 4px;
+}
+
 .hero .button {
   margin-top: 40px;
   align-self: start;
@@ -182,9 +198,13 @@ header a[aria-current="page"] {
   font-size: 1.125rem;
 }
 
-.featured-project .subtle-link {
+.featured-project .subtle-link,
+.project-card .subtle-link {
   color: #7c2d12;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
   text-decoration-color: rgba(124, 45, 18, 0.45);
+  text-underline-offset: 4px;
 }
 
 .featured-project .button {
@@ -224,11 +244,6 @@ header a[aria-current="page"] {
   color: #6b4f3f;
 }
 
-.project-card .subtle-link {
-  color: #7c2d12;
-  text-decoration-color: rgba(124, 45, 18, 0.45);
-}
-
 .button {
   display: inline-flex;
   width: fit-content;
@@ -244,14 +259,6 @@ header a[aria-current="page"] {
 .button:hover {
   text-decoration: none;
   background: #115e59;
-}
-
-.hero .subtle-link,
-.hero-short .subtle-link {
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-decoration-color: rgba(255, 255, 255, 0.35);
-  text-underline-offset: 4px;
 }
 
 footer {
