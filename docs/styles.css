@@ -97,7 +97,7 @@ header a[aria-current="page"] {
   position: absolute;
   inset: 0 0 0 42%;  /* How far to the right the photo *starts* */
   z-index: -2;
-  background: url("../images/cover_cropped2.jpg") 33% center / cover no-repeat;
+  background: url("/images/cover_cropped2.jpg") 33% center / cover no-repeat;
   content: "";
 }
 
@@ -122,7 +122,7 @@ header a[aria-current="page"] {
 }
 
 .about-hero::before {
-  background: url("../images/about.jpg") 33% center / cover no-repeat;
+  background: url("/images/about.jpg") 33% center / cover no-repeat;
 }
 
 .hero-text {
