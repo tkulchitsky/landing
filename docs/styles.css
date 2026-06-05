@@ -243,6 +243,49 @@ header a[aria-current="page"] {
   align-self: start;
 }
 
+.creative-showcase {
+  gap: 18px;
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+
+.creative-feature {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.75fr) minmax(0, 1fr);
+  align-items: center;
+  gap: 24px;
+  max-width: 920px;
+  border: 1px solid #fed7aa;
+  border-radius: 8px;
+  padding: 18px;
+  background: #fffbf5;
+}
+
+.creative-feature-img {
+  width: 100%;
+  height: clamp(140px, 18vw, 190px);
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+.creative-feature-text {
+  display: grid;
+  gap: 10px;
+}
+
+.creative-feature h3 {
+  margin: 0;
+  color: #7c2d12;
+  font-size: 1.35rem;
+}
+
+.creative-feature p {
+  max-width: 560px;
+  margin: 0;
+  color: #6b4f3f;
+  font-size: 1.05rem;
+}
+
 /* Projects */
 
 .project-grid {
@@ -511,6 +554,15 @@ footer {
 
   .featured-project {
     grid-template-columns: 1fr;
+  }
+
+  .creative-feature {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .creative-feature-img {
+    height: 150px;
   }
 
   .resume-document-wrap,
