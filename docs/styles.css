@@ -20,10 +20,6 @@ body {
   background: #101820;
 }
 
-html:has(.home-section) {
-  scroll-snap-type: y proximity;
-}
-
 header,
 main,
 footer {
@@ -176,13 +172,20 @@ header a[aria-current="page"] {
 
 /* Home scroll sections */
 
-.hero:has(~ .home-section),
-.home-section {
-  scroll-snap-align: start;
+.stacked-panels-active .home-panels {
+  position: relative;
+  width: 100vw;
+  height: 100dvh;
+  margin-left: calc(50% - 50vw);
+  overflow: hidden;
 }
 
-.hero:has(~ .home-section) {
-  scroll-margin-top: var(--header-height);
+.stacked-panels-active .home-panels > section {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  min-height: 100%;
+  margin-left: 0;
 }
 
 .home-section {

@@ -10,6 +10,8 @@
     <title>Landing Page</title>
     <link rel="stylesheet" href="styles.css" />
     <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.2/lib/anime.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js" defer></script>
     <script src="script.js" defer></script>
   </head>
   <body>
@@ -24,79 +26,81 @@
     </header>
 
     <main>
-      <section class="hero" aria-labelledby="page-title">
-        <img
-          class="hero-image"
-          src="images/cover_cropped2.jpg"
-          alt="Tim Kulchitsky"
-        />
-        <h1 id="page-title">Tim Kulchitsky</h1>
-        <div class="hero-text">
-          <p>
+      <div class="home-panels">
+        <section class="hero" aria-labelledby="page-title">
+          <img
+            class="hero-image"
+            src="images/cover_cropped2.jpg"
+            alt="Tim Kulchitsky"
+          />
+          <h1 id="page-title">Tim Kulchitsky</h1>
+          <div class="hero-text">
+            <p>
               Hi, I'm Tim—a programmer, musician, photographer, and amateur philosopher.
-          </p>
-          <p>
-            If you're interested in my software engineering experience, check out
-            my résumé. Or, keep scrolling to see the more creative side of me.
-          </p>
-        </div>
-        <a class="button" href="resume.html">See Résumé</a>
-      </section>
+            </p>
+            <p>
+              If you're interested in my software engineering experience, check out
+              my résumé. Or, keep scrolling to see the more creative side of me.
+            </p>
+          </div>
+          <a class="button" href="resume.html">See Résumé</a>
+        </section>
 
-      <section class="home-section music-section" aria-labelledby="music-title">
-        <div class="home-section-text">
-          <h2 id="music-title">Music</h2>
-          <p>
-            I try to engage with music whenever I have the chance.
-            Here is my YouTube page with recordings of me playing piano,
-            as well as other musical things.
-          </p>
-          <a
-            class="youtube-channel-card"
-            href="https://youtube.com/@timkulchitsky6690?si=BteOPXOlohSPna3w"
-            aria-label="Open Tim Kulchitsky on YouTube"
-          >
-            <span class="youtube-channel-rainbow" aria-hidden="true"></span>
-            <img
-              class="youtube-channel-image"
-              src="images/about.jpg"
-              alt=""
-            />
-            <span class="youtube-channel-info">
-              <span class="youtube-channel-name">Tim Kulchitsky</span>
-              <span class="youtube-channel-meta">Piano recordings and arrangements</span>
-            </span>
-            <svg
-              class="youtube-channel-icon"
-              aria-hidden="true"
-              viewBox="0 0 24 24"
+        <section class="home-section music-section" aria-labelledby="music-title">
+          <div class="home-section-text">
+            <h2 id="music-title">Music</h2>
+            <p>
+              I try to engage with music whenever I have the chance.
+              Here is my YouTube page with recordings of me playing piano,
+              as well as other musical things.
+            </p>
+            <a
+              class="youtube-channel-card"
+              href="https://youtube.com/@timkulchitsky6690?si=BteOPXOlohSPna3w"
+              aria-label="Open Tim Kulchitsky on YouTube"
             >
-              <path d="M15 3h6v6" />
-              <path d="M10 14 21 3" />
-              <path d="M21 14v4a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3V6a3 3 0 0 1 3-3h4" />
-            </svg>
-          </a>
-        </div>
-        <img
-          class="home-section-image"
-          src="images/piano3.PNG"
-          alt="Piano keyboard and sheet music"
-        />
-      </section>
+              <span class="youtube-channel-rainbow" aria-hidden="true"></span>
+              <img
+                class="youtube-channel-image"
+                src="images/about.jpg"
+                alt=""
+              />
+              <span class="youtube-channel-info">
+                <span class="youtube-channel-name">Tim Kulchitsky</span>
+                <span class="youtube-channel-meta">Piano recordings and arrangements</span>
+              </span>
+              <svg
+                class="youtube-channel-icon"
+                aria-hidden="true"
+                viewBox="0 0 24 24"
+              >
+                <path d="M15 3h6v6" />
+                <path d="M10 14 21 3" />
+                <path d="M21 14v4a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3V6a3 3 0 0 1 3-3h4" />
+              </svg>
+            </a>
+          </div>
+          <img
+            class="home-section-image"
+            src="images/piano3.PNG"
+            alt="Piano keyboard and sheet music"
+          />
+        </section>
 
-      <section class="home-section photography-section" aria-labelledby="photography-title">
-        <div class="home-section-text">
-          <h2 id="photography-title">Photography</h2>
-          <p>
-            A photography page is coming soon.
-          </p>
-        </div>
-        <img
-          class="home-section-image"
-          src="images/camera.jpg"
-          alt="Camera on a table"
-        />
-      </section>
+        <section class="home-section photography-section" aria-labelledby="photography-title">
+          <div class="home-section-text">
+            <h2 id="photography-title">Photography</h2>
+            <p>
+              A photography page is coming soon.
+            </p>
+          </div>
+          <img
+            class="home-section-image"
+            src="images/camera.jpg"
+            alt="Camera on a table"
+          />
+        </section>
+      </div>
     </main>
 
     <footer>
