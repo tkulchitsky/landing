@@ -20,6 +20,10 @@ body {
   background: #101820;
 }
 
+html:has(.home-section) {
+  scroll-snap-type: y proximity;
+}
+
 header,
 main,
 footer {
@@ -171,6 +175,15 @@ header a[aria-current="page"] {
 }
 
 /* Home scroll sections */
+
+.hero:has(~ .home-section),
+.home-section {
+  scroll-snap-align: start;
+}
+
+.hero:has(~ .home-section) {
+  scroll-margin-top: var(--header-height);
+}
 
 .home-section {
   position: relative;
